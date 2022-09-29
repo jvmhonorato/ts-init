@@ -15,3 +15,25 @@
 8: npm install express,  npm install --save-dev @types/express
 
 9: passar tipagem no import do express(Express.Aplication) e tambem nas rotas passando o (express request e o express response)
+
+10:Gerar um arquivo ts.config para pádronizar transpilação com deixar a pipagem implicita o diretorio raiz e de destino e permitir JS: 
+
+npx tsc --init --rootDir src --outDir dist --noImplicitAny true --allowJs true
+
+11:configurar pra automatizar a transpilação juto com o nodemon: 
+
+npm install --save-dev ts-node nodemon / usar: npx ts-node src/index.ts
+
+12: quando se usa o "esModuleInterop: true" nao precisa usar o (* as) no import 
+
+13: criar nodemon.json e configurar pra monitorar a pasta SRC, os aqrquivos de sáida os arquivos a serem ignorados, e  execução auto do nodemon em execução"
+
+14: Em package.json passar o script : "start:dev":"nodemon" a partir disso usar: npm run start:dev  pra desenvolvimento
+
+15: criar script "build": "tsc" que é o compilador TSC toda vez que ele rodar ele transpila de TS pra JS
+
+16: criar o script start: "start":"node dist/index.js" pra iniciar o servidor normalmente
+
+OBS: ignorar o diretorio dist pois o script build semrpe ira gerar ele na transpilação o SRC que é o principal
+
+OBS: em package.json o "main": "dist/index.js",
