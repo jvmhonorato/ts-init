@@ -16,3 +16,11 @@ function ola(pessoa) {
     console.log('ola', pessoa.nome);
 }
 ola({ nome: 'teste', sexo: "m", idade: 10 });
+//implements intefarce on class
+var Funcionario = /** @class */ (function () {
+    function Funcionario(nome) {
+        this.nome = nome;
+    }
+    return Funcionario;
+}());
+var func1 = new Funcionario('Victor');

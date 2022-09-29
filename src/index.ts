@@ -32,3 +32,17 @@ function ola(pessoa: Pessoa){
 ola({nome: 'teste', sexo: "m" , idade:10})
 
 
+//implements intefarce on class
+class Funcionario implements Pessoa {
+    constructor(nome: string){
+        this.nome = nome
+    }
+    [key: string]: string | number;
+    sexo: "m" | "f";
+    nome: string
+}
+
+
+let func1 :Funcionario = new Funcionario('Victor')
+
+

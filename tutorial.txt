@@ -7,3 +7,7 @@
 4:comando pra tranpilar: npx tsc src/index.ts --outDir dist/ --watch
 
 5: usar export{} no inicio do arquivo
+
+6: criar classe Funcionario depois usar implements pra trazer a inteface pra essa classe
+
+7: avitar usar muito o extend usar no maximo por 1 nível
