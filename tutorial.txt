@@ -10,4 +10,8 @@
 
 6: criar classe Funcionario depois usar implements pra trazer a inteface pra essa classe
 
-7: avitar usar muito o extend usar no maximo por 1 nível
+7: evitar usar muito o extend usar no maximo por 1 nível
+
+8: npm install express,  npm install --save-dev @types/express
+
+9: passar tipagem no import do express(Express.Aplication) e tambem nas rotas passando o (express request e o express response)

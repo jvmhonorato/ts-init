@@ -1,3 +1,17 @@
+import * as Express from 'express'
+
+const app : Express.Application = Express()
+
+app.get('/',(req: Express.Request, res:Express.Response)=> {
+    res.send('test')
+});
+
+app.listen(8080,  () => {
+    console.log('Server running')
+});
+
+
+/*
 export{}
 
 //model type
@@ -44,5 +58,5 @@ class Funcionario implements Pessoa {
 
 
 let func1 :Funcionario = new Funcionario('Victor')
-
+*/
 

@@ -1,26 +1,58 @@
 "use strict";
 exports.__esModule = true;
-var pontoA = {
-    x: 1,
-    y: 2
-};
+var Express = require("express");
+var app = Express();
+app.get('/', function (req, res) {
+    res.send('test');
+});
+app.listen(8080, function () {
+    console.log('Server running');
+});
+/*
+export{}
+
+//model type
+interface Point {
+    x: number;
+    y: number;
+}
+
+const pontoA: Point = {
+    x:1,
+    y:2
+}
+//model types
+interface Pessoa {
+    nome:string;
+    sexo: 'm'|'f';
+    [key: string]:string | number;
+}
+
 //use models to type the object
-var victor = {
+const victor: Pessoa= {
     nome: 'Victor',
-    sexo: "m",
+    sexo:"m",
     idade: 33,
     teste: 10
-};
-//use the type object as a function params
-function ola(pessoa) {
-    console.log('ola', pessoa.nome);
 }
-ola({ nome: 'teste', sexo: "m", idade: 10 });
+
+//use the type object as a function params
+function ola(pessoa: Pessoa){
+    console.log('ola', pessoa.nome)
+}
+ola({nome: 'teste', sexo: "m" , idade:10})
+
+
 //implements intefarce on class
-var Funcionario = /** @class */ (function () {
-    function Funcionario(nome) {
-        this.nome = nome;
+class Funcionario implements Pessoa {
+    constructor(nome: string){
+        this.nome = nome
     }
-    return Funcionario;
-}());
-var func1 = new Funcionario('Victor');
+    [key: string]: string | number;
+    sexo: "m" | "f";
+    nome: string
+}
+
+
+let func1 :Funcionario = new Funcionario('Victor')
+*/
