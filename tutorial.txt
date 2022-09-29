@@ -1,0 +1,9 @@
+1: npm init -y
+
+2:npm install --save-dev typescript
+
+3: criar src/index.typescript. sempre criar o projeto em TS dentro do diretorio SRC pra depois compilar pra JS em outro diretorio DIST
+
+4:comando pra tranpilar: npx tsc src/index.ts --outDir dist/ --watch
+
+5: usar export{} no inicio do arquivo
